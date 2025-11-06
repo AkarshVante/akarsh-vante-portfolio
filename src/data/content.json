@@ -1,0 +1,207 @@
+{
+  "site": {
+    "title": "Akarsh Vante — Software Developer (AI / ML / Data Eng)",
+    "tagline": "I build reliable ML systems and scalable data platforms that turn experimentation into production.",
+    "theme": {
+      "primary_gradient_start": "#7C3AED",
+      "primary_gradient_end": "#06B6D4",
+      "bg_dark": "#0F172A",
+      "surface_dark": "#0B1220",
+      "accent": "#00D4FF",
+      "neutral": "#F8FAFC",
+      "fonts": {
+        "ui": "Inter, system-ui, -apple-system, Segoe UI, Roboto",
+        "mono": "JetBrains Mono, ui-monospace, SFMono-Regular"
+      }
+    },
+    "contact_email": "akarshvante@gmail.com",
+    "phone": "9021509359",
+    "location": "Kolhapur, Maharashtra, India",
+    "social": {
+      "linkedin": "https://linkedin.com/in/AkarshVante",
+      "github": "https://github.com/AkarshVante"
+    }
+  },
+
+  "personal": {
+    "name": "Akarsh Chandrakant Vante",
+    "role": "Software Developer · AI / ML / Data Engineering",
+    "summary": "Software Developer with strong Python, SQL and analytical skills, specializing in data-driven solutions. Experienced building and deploying scalable, production-ready applications, writing optimized database queries, and applying core CS fundamentals to solve business problems in Agile teams.", 
+    "summary_source": "From uploaded résumé." 
+  },
+
+  "education": [
+    {
+      "degree": "B.Tech. in Computer Science and Engineering",
+      "institution": "Sharad Institute of Technology and College of Engineering, Yadrav",
+      "dates": "2022 – 2026 (Expected)",
+      "gpa": "8.11"
+    },
+    {
+      "degree": "XII (Science)",
+      "institution": "Sharad Science and Commerce College, Yadrav",
+      "dates": "2021 – 2022",
+      "score": "76%"
+    },
+    {
+      "degree": "X (SSC)",
+      "institution": "New English School, Shedshal",
+      "dates": "2019 – 2020",
+      "score": "93.6%"
+    }
+  ],
+
+  "skills": {
+    "data_science": ["Python", "Data Visualization", "EDA", "Feature Engineering", "Machine Learning Algorithms"],
+    "libraries": ["NumPy", "Pandas", "Matplotlib", "Seaborn", "scikit-learn", "TensorFlow", "Flask", "Streamlit"],
+    "languages": ["Python", "Java", "SQL"],
+    "databases": ["MySQL", "Astra DB", "MongoDB"],
+    "core_cs": ["OOP", "DSA", "DBMS", "Operating Systems", "Computer Networks"],
+    "tools": ["Git", "GitHub", "AWS (EC2, S3)", "CI/CD (basics)", "Jupyter", "Google Colab"]
+  },
+
+  "projects": [
+    {
+      "id": "geminivision",
+      "name": "GeminiVision — AI-powered Image Analyzer",
+      "year": 2024,
+      "tags": ["Vision", "GenAI", "Streamlit"],
+      "tech": ["Python", "Streamlit", "Google Gemini Pro"],
+      "summary": "An image analysis app integrating Google Gemini Pro with an interactive UI for uploads, visualization, and model explanations.",
+      "metrics": ["Processing speed improved by 85% (per résumé)."],
+      "links": {
+        "demo": "https://geminivisionai.streamlit.app/",
+        "code": "https://github.com/AkarshVante"
+      },
+      "details": {
+        "problem": "Provide a fast, explainable image analysis experience for end users.",
+        "role": "Lead developer — built integration, UI and deployment.",
+        "approach": "Integrated Google Gemini Pro for inference, optimized preprocessing pipeline to reduce latency, added explainability overlays and interactive visualizations.",
+        "artifacts": ["Streamlit demo", "Model explainability visualizations"],
+        "lessons": "Optimizing preprocessing and batching can drastically reduce end-to-end latency for GenAI-backed apps."
+      },
+      "source": "résumé"
+    },
+    {
+      "id": "ragchat",
+      "name": "RAGChat — Multi-Document Q&A Bot",
+      "year": 2025,
+      "tags": ["NLP", "RAG", "LangChain", "Vector DB"],
+      "tech": ["LangChain", "Python", "Vector Databases", "LLMs (embeddings)"],
+      "summary": "Retrieval-augmented chatbot using embeddings and vector DB to answer multi-document queries.",
+      "metrics": ["Query retrieval time reduced by 60% (per résumé)."],
+      "links": {
+        "demo": "https://pdf-chat-app-system.streamlit.app/",
+        "code": "https://github.com/AkarshVante"
+      },
+      "details": {
+        "problem": "Fast, accurate answers from collections of documents.",
+        "role": "Built retrieval pipeline, passage ranking, relevance filtering and context-windowing.",
+        "approach": "Used embeddings + vector DB, implemented ranking and context selection to improve relevance and latency.",
+        "artifacts": ["Streamlit demo", "vector DB seed scripts"],
+        "lessons": "Smart passage ranking and context-windowing improves answer accuracy without large context windows."
+      },
+      "source": "résumé"
+    },
+    {
+      "id": "sales_bi",
+      "name": "Sales BI Dashboard — Executive Sales Analytics",
+      "year": 2025,
+      "tags": ["BI", "Dashboard", "SQL", "Plotly"],
+      "tech": ["Python", "SQL", "Plotly", "Pandas", "Streamlit"],
+      "summary": "Executive sales dashboard with KPIs, cohort retention, and RFM analysis that reduced weekly reporting time.",
+      "metrics": ["Weekly reporting time cut by ~70% (per résumé)."],
+      "links": {
+        "demo": "https://bi-report.streamlit.app/",
+        "code": "https://github.com/AkarshVante"
+      },
+      "details": {
+        "problem": "Manual, slow weekly reporting for stakeholders.",
+        "role": "Built ETL, analytics, visualizations, and deployed via Streamlit Cloud.",
+        "approach": "Automated ingestion, computed KPIs and cohorts, created exportable CSV and stakeholder insights.",
+        "artifacts": ["Streamlit demo", "exportable CSV"],
+        "lessons": "Well-designed dashboards with exportable artifacts dramatically reduce manual reporting overhead."
+      },
+      "source": "résumé"
+    }
+  ],
+
+  "experience": [
+    {
+      "title": "Technical Event Co-ordinator — Coding Club, SITCOE",
+      "company": "Sharad Institute of Technology and College of Engineering, Yadrav",
+      "dates": "—",
+      "highlights": [
+        "Organized 2+ technical events (DSA, debugging, SQL challenges) with 100+ participants.",
+        "Mentored peers and collaborated with a 5-member team to manage logistics, boosting participation by 40%."
+      ],
+      "source": "résumé"
+    }
+  ],
+
+  "achievements": [
+    "Solved 200+ problems on LeetCode and GeeksforGeeks (50+ SQL problems).",
+    "Participated in national-level hackathons: Innovation (SITCOE), Flipkart Grid 3.0 and Smart India Hackathon.",
+    "Built and deployed multiple production-ready AI applications using Python and cloud services."
+  ],
+
+  "certificates": [
+    {
+      "name": "AWS Academy Cloud Foundations",
+      "link": "https://www.credly.com/badges/a892489e-e56a-43a9-91f5-7a16eb0143e1/public_url"
+    },
+    {
+      "name": "AWS Academy ML Foundation",
+      "link": "https://www.credly.com/badges/ea07908e-2179-46cb-b23f-b77781161cc4/public_url"
+    },
+    {
+      "name": "AI-ML Workshop at IIT Bombay",
+      "link": null
+    },
+    {
+      "name": "Udemy: Complete Data Science, ML & DL (Krish Naik)",
+      "link": null
+    }
+  ],
+
+  "links": {
+    "resume_pdf": "https://drive.google.com/file/d/1kSXdvjYiIU-O19ArBxo6Ybr6znZrXIAj/view?usp=sharing",
+    "demos": [
+      "https://geminivisionai.streamlit.app/",
+      "https://pdf-chat-app-system.streamlit.app/",
+      "https://bi-report.streamlit.app/"
+    ],
+    "github": "https://github.com/AkarshVante",
+    "linkedin": "https://linkedin.com/in/AkarshVante"
+  },
+
+  "seo": {
+    "title_template": "Akarsh Vante — Software Developer (AI/ML / Data Engineering)",
+    "description": "Akarsh Vante — Software Developer specializing in Python, SQL, ML, and data-driven production systems. See projects, demos and contact for collaboration.",
+    "og_image_spec": {
+      "title": "Akarsh Vante",
+      "subtitle": "Software Developer · AI/ML · Data Engineering",
+      "palette": ["#7C3AED", "#06B6D4"],
+      "dimensions": "1200x630"
+    }
+  },
+
+  "extras": {
+    "hero_variants": ["minimal", "narrative", "metrics-first"],
+    "recommended_features": [
+      "Live Gradio/Streamlit demo embed for GeminiVision",
+      "Notebook gallery (Colab links) for reproducibility",
+      "Performance dashboard for model metrics",
+      "MLOps / CI badges",
+      "Dataset descriptions + schema",
+      "Project PDF export",
+      "Small blog auto-generated from projects",
+      "Contact scheduling (Calendly)"
+    ]
+  },
+
+  "meta": {
+    "generated_from_resume_file": "Akarsh Vante resume.pdf",
+    "resume_file_citation": ":contentReference[oaicite:1]{index=1}"
+  }
+}
