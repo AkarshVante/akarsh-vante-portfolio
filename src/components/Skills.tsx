@@ -2,9 +2,11 @@ import content from "@/data/content.json";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Database, Brain, Code2, Wrench, BookOpen, Cloud } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const Skills = () => {
   const { skills } = content;
+  const shouldReduceMotion = useReducedMotion();
 
   const skillCategories = [
     {
@@ -46,7 +48,14 @@ export const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-surface">
+    <motion.section
+      id="skills"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-surface"
+      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -120,6 +129,6 @@ export const Skills = () => {
           </Card>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

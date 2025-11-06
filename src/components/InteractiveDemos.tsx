@@ -2,9 +2,11 @@ import { ExternalLink, Play } from "lucide-react";
 import content from "@/data/content.json";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const InteractiveDemos = () => {
   const { links, projects } = content;
+  const shouldReduceMotion = useReducedMotion();
 
   const demos = projects.map((project) => ({
     name: project.name.split("—")[0].trim(),
@@ -14,7 +16,13 @@ export const InteractiveDemos = () => {
   }));
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-surface">
+    <motion.section
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-surface"
+      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -79,19 +87,19 @@ export const InteractiveDemos = () => {
             <p className="text-muted-foreground mb-4">
               Want to see more demos or collaborate on a project?
             </p>
-            <Button
-              variant="outline"
-              className="border-primary hover:bg-primary hover:text-primary-foreground"
-              onClick={() => {
-                const element = document.querySelector("#contact");
-                element?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              Get in Touch
-            </Button>
+                <Button
+                  variant="outline"
+                  className="border-primary hover:bg-primary hover:text-primary-foreground"
+                  onClick={() => {
+                    const element = document.querySelector("#contact");
+                    element?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
+                  Get in Touch
+                </Button>
           </Card>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

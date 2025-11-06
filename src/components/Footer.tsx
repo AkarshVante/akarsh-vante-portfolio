@@ -1,17 +1,25 @@
 import { Github, Linkedin, Download, ArrowUp } from "lucide-react";
 import content from "@/data/content.json";
 import { Button } from "@/components/ui/button";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const Footer = () => {
   const { site, links } = content;
   const currentYear = new Date().getFullYear();
+  const shouldReduceMotion = useReducedMotion();
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="py-12 px-4 sm:px-6 lg:px-8 bg-surface border-t border-border">
+    <motion.footer
+      className="py-12 px-4 sm:px-6 lg:px-8 bg-surface border-t border-border"
+      initial={shouldReduceMotion ? undefined : { opacity: 0 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
@@ -108,6 +116,6 @@ export const Footer = () => {
           </Button>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };

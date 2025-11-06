@@ -1,12 +1,21 @@
 import { Briefcase, Users } from "lucide-react";
 import content from "@/data/content.json";
 import { Card } from "@/components/ui/card";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const Experience = () => {
   const { experience } = content;
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-surface">
+    <motion.section
+      id="experience"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-surface"
+      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -60,6 +69,6 @@ export const Experience = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

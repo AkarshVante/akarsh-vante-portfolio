@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const Header = () => {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -65,13 +67,21 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <button
+              <motion.button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className="px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-surface-elevated"
+                className="px-4 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-surface-elevated relative group"
+                whileHover={shouldReduceMotion ? undefined : { scale: 1.05 }}
+                whileTap={shouldReduceMotion ? undefined : { scale: 0.95 }}
               >
                 {item.label}
-              </button>
+                <motion.span
+                  className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary to-primary-end origin-left"
+                  initial={{ scaleX: 0 }}
+                  whileHover={shouldReduceMotion ? undefined : { scaleX: 1 }}
+                  transition={{ duration: 0.2 }}
+                />
+              </motion.button>
             ))}
           </div>
 

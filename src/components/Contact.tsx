@@ -6,10 +6,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const Contact = () => {
   const { site } = content;
   const { toast } = useToast();
+  const shouldReduceMotion = useReducedMotion();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,7 +44,14 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
+    <motion.section
+      id="contact"
+      className="py-20 px-4 sm:px-6 lg:px-8"
+      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container mx-auto max-w-5xl">
         <div className="mb-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -154,18 +163,20 @@ export const Contact = () => {
                   className="bg-surface border-border focus:border-primary resize-none"
                 />
               </div>
-              <Button
-                type="submit"
-                className="w-full bg-gradient-to-r from-primary to-primary-end hover:opacity-90 transition-opacity"
-                size="lg"
-              >
-                <Send className="mr-2 h-5 w-5" />
-                Send Message
-              </Button>
+              <motion.div whileHover={{ scale: shouldReduceMotion ? 1 : 1.03 }} whileTap={{ scale: shouldReduceMotion ? 1 : 0.98 }}>
+                <Button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-primary to-primary-end hover:opacity-90 transition-opacity"
+                  size="lg"
+                >
+                  <Send className="mr-2 h-5 w-5" />
+                  Send Message
+                </Button>
+              </motion.div>
             </form>
           </Card>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

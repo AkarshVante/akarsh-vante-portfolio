@@ -3,12 +3,21 @@ import content from "@/data/content.json";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const Projects = () => {
   const { projects } = content;
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+    <motion.section
+      id="projects"
+      className="py-20 px-4 sm:px-6 lg:px-8"
+      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -21,9 +30,16 @@ export const Projects = () => {
 
         <div className="space-y-8">
           {projects.map((project, idx) => (
-            <Card
+            <motion.div
               key={project.id}
-              className="overflow-hidden bg-surface-elevated border-border hover:border-primary transition-all duration-300 group"
+              initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+              whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.18 }}
+              transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
+              whileHover={shouldReduceMotion ? undefined : { scale: 1.02, translateY: -6 }}
+              whileTap={shouldReduceMotion ? undefined : { scale: 0.995 }}
+            >
+              <Card className="overflow-hidden bg-surface-elevated border-border hover:border-primary transition-all duration-300 group hover:shadow-xl"
             >
               <div className="grid lg:grid-cols-3 gap-6 p-6 lg:p-8">
                 {/* Left: Project Info */}
@@ -168,9 +184,10 @@ export const Projects = () => {
                 </div>
               </div>
             </Card>
+            </motion.div>
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };

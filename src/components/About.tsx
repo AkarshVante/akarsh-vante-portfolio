@@ -1,12 +1,21 @@
 import { GraduationCap, Award, Code } from "lucide-react";
 import content from "@/data/content.json";
 import { Card } from "@/components/ui/card";
+import { motion, useReducedMotion } from "framer-motion";
 
 export const About = () => {
   const { personal, education, achievements } = content;
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8">
+    <motion.section
+      id="about"
+      className="py-20 px-4 sm:px-6 lg:px-8"
+      initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+      whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.18 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="container mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -85,6 +94,6 @@ export const About = () => {
           </p>
         </Card>
       </div>
-    </section>
+    </motion.section>
   );
 };
