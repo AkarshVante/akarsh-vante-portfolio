@@ -128,6 +128,17 @@
 
   "experience": [
     {
+      "title": "Data Scientist Intern",
+      "company": "Golden Bird Learning, Pvt. Ltd.",
+      "dates": "02/2025 – 05/2025 | Remote",
+      "highlights": [
+        "Contributed to predictive modeling projects using Scikit-Learn and TensorFlow to analyze and predict student engagement patterns.",
+        "Owned data preprocessing and feature engineering tasks, using Python (Pandas, NumPy) to clean, transform, and prepare large datasets.",
+        "Analyzed and interpreted model results, presenting findings to the senior team to help validate performance and refine model features."
+      ],
+      "source": "résumé"
+    },
+    {
       "title": "Technical Event Co-ordinator — Coding Club, SITCOE",
       "company": "Sharad Institute of Technology and College of Engineering, Yadrav",
       "dates": "—",
