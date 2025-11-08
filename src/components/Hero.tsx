@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, Download, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import content from "@/data/content.json";
 import { motion, useReducedMotion } from "framer-motion";
@@ -66,7 +66,7 @@ export const Hero = () => {
             👋 Available for opportunities
           </motion.div>
           <motion.h1
-            className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-glow"
             variants={itemVariants}
           >
             Hi, I'm <span className="gradient-text">{personal.name.split(" ")[0]}</span>
@@ -165,7 +165,7 @@ export const Hero = () => {
       <motion.div whileHover={{ scale: shouldReduceMotion ? 1 : 1.03 }} whileTap={{ scale: shouldReduceMotion ? 1 : 0.98 }}>
         <Button
           size="lg"
-          className="bg-gradient-to-r from-primary to-primary-end hover:opacity-90 transition-opacity"
+          className="bg-gradient-to-r from-primary to-primary-end hover:opacity-90 transition-opacity glow-accent glow-hover"
           onClick={() => {
             const element = document.querySelector("#contact");
             element?.scrollIntoView({ behavior: "smooth" });
@@ -192,7 +192,7 @@ export const Hero = () => {
         <Button
           size="icon"
           variant="ghost"
-          className="rounded-full hover:bg-surface-elevated"
+          className="rounded-full hover:bg-surface-elevated icon-glow"
           asChild
         >
           <a href={site.social.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -202,11 +202,31 @@ export const Hero = () => {
         <Button
           size="icon"
           variant="ghost"
-          className="rounded-full hover:bg-surface-elevated"
+          className="rounded-full hover:bg-surface-elevated icon-glow"
           asChild
         >
           <a href={site.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <Linkedin className="h-5 w-5" />
+          </a>
+        </Button>
+        <Button
+          size="icon"
+          variant="ghost"
+          className="rounded-full hover:bg-surface-elevated icon-glow"
+          asChild
+        >
+          <a href={content.links.leetcode} target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+            <Code2 className="h-5 w-5" />
+          </a>
+        </Button>
+        <Button
+          size="icon"
+          variant="ghost"
+          className="rounded-full hover:bg-surface-elevated icon-glow"
+          asChild
+        >
+          <a href={content.links.geeksforgeeks} target="_blank" rel="noopener noreferrer" aria-label="GeeksforGeeks">
+            <Code2 className="h-5 w-5" />
           </a>
         </Button>
       </div>

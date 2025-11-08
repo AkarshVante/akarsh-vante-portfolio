@@ -30,7 +30,7 @@ export const Experience = () => {
           {experience.map((exp, idx) => (
             <Card
               key={idx}
-              className="p-6 bg-surface-elevated border-border hover:border-primary transition-all duration-300"
+              className="p-6 bg-surface-elevated border-border hover:border-primary transition-all duration-300 group card-glow card-hover"
             >
               <div className="flex gap-4">
                 <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-primary-end h-fit">

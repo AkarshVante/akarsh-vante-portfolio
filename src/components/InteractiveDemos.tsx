@@ -37,13 +37,13 @@ export const InteractiveDemos = () => {
           {demos.map((demo, idx) => (
             <Card
               key={idx}
-              className="p-6 bg-surface-elevated border-border hover:border-primary transition-all duration-300 group"
+              className="p-6 bg-surface-elevated border-border hover:border-primary transition-all duration-300 group flex flex-col h-full card-glow card-hover"
             >
-              <div className="space-y-4">
+              <div className="flex-1 space-y-4">
                 <div className="aspect-video bg-surface rounded-lg flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-mesh opacity-50"></div>
                   <div className="relative">
-                    <Play className="h-12 w-12 text-primary group-hover:scale-110 transition-transform" />
+                    <Play className="h-12 w-12 text-primary group-hover:scale-110 transition-transform icon-glow" />
                   </div>
                 </div>
 
@@ -66,9 +66,11 @@ export const InteractiveDemos = () => {
                     </span>
                   ))}
                 </div>
+              </div>
 
+              <div className="mt-auto pt-4">
                 <Button
-                  className="w-full bg-gradient-to-r from-primary to-primary-end hover:opacity-90"
+                  className="w-full bg-gradient-to-r from-primary to-primary-end hover:opacity-90 glow-hover"
                   asChild
                 >
                   <a href={demo.url} target="_blank" rel="noopener noreferrer">

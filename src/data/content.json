@@ -128,7 +128,7 @@
 
   "experience": [
     {
-      "title": "Data Scientist Intern",
+      "title": "Data Science Intern",
       "company": "Golden Bird Learning, Pvt. Ltd.",
       "dates": "02/2025 – 05/2025 | Remote",
       "highlights": [
@@ -167,7 +167,7 @@
     },
     {
       "name": "AI-ML Workshop at IIT Bombay",
-      "link": null
+      "link": "https://drive.google.com/file/d/1kSXdvjYiIU-O19ArBxo6Ybr6znZrXIAj/view?usp=sharing"
     },
     {
       "name": "Udemy: Complete Data Science, ML & DL (Krish Naik)",
@@ -183,7 +183,9 @@
       "https://bi-report.streamlit.app/"
     ],
     "github": "https://github.com/AkarshVante",
-    "linkedin": "https://linkedin.com/in/AkarshVante"
+    "linkedin": "https://linkedin.com/in/AkarshVante",
+    "leetcode": "https://leetcode.com/AkarshVante/",
+    "geeksforgeeks": "https://www.geeksforgeeks.org/user/akarshvante/"
   },
 
   "seo": {

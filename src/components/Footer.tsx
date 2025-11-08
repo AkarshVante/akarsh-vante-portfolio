@@ -1,4 +1,4 @@
-import { Github, Linkedin, Download, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Download, ArrowUp, Code2 } from "lucide-react";
 import content from "@/data/content.json";
 import { Button } from "@/components/ui/button";
 import { motion, useReducedMotion } from "framer-motion";
@@ -94,6 +94,28 @@ export const Footer = () => {
                 >
                   <Linkedin className="mr-2 h-4 w-4" />
                   LinkedIn Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href={links.leetcode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
+                >
+                  <Code2 className="mr-2 h-4 w-4" />
+                  LeetCode Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href={links.geeksforgeeks}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center"
+                >
+                  <Code2 className="mr-2 h-4 w-4" />
+                  GeeksforGeeks Profile
                 </a>
               </li>
             </ul>

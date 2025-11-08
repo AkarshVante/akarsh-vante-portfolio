@@ -30,7 +30,7 @@ export const Certificates = () => {
           {certificates.map((cert, idx) => (
             <Card
               key={idx}
-              className="p-6 bg-surface-elevated border-border hover:border-primary transition-all duration-300 group"
+              className="p-6 bg-surface-elevated border-border hover:border-primary transition-all duration-300 group card-glow card-hover"
             >
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-primary-end flex-shrink-0 group-hover:scale-110 transition-transform">

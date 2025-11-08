@@ -39,7 +39,7 @@ export const Projects = () => {
               whileHover={shouldReduceMotion ? undefined : { scale: 1.02, translateY: -6 }}
               whileTap={shouldReduceMotion ? undefined : { scale: 0.995 }}
             >
-              <Card className="overflow-hidden bg-surface-elevated border-border hover:border-primary transition-all duration-300 group hover:shadow-xl"
+              <Card className="overflow-hidden bg-surface-elevated border-border hover:border-primary transition-all duration-300 group hover:shadow-xl card-glow card-hover"
             >
               <div className="grid lg:grid-cols-3 gap-6 p-6 lg:p-8">
                 {/* Left: Project Info */}
